@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  ok-api:
+    image: ok-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    stdin_open: true   # Keep STDIN open even if not attached
+    tty: true          # Allocate a pseudo-TTY
